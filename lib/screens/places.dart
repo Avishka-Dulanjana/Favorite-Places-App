@@ -1,3 +1,4 @@
+import 'package:favourite_places/screens/add_place.dart';
 import 'package:flutter/material.dart';
 
 import '../widgets/places_list.dart';
@@ -12,7 +13,11 @@ class PlacesScreen extends StatelessWidget {
         title: const Text('Your Places'),
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.of(context).push(MaterialPageRoute(
+                builder: (context) => const AddPlaceScreen(),
+              ));
+            },
             icon: const Icon(Icons.add),
           ),
         ],
