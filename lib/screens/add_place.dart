@@ -29,7 +29,7 @@ class _AddPlaceScreenState extends State<AddPlaceScreen> {
         child: Column(
           children: [
             TextField(
-              decoration: const InputDecoration(labelText: 'Title'),
+              decoration: const InputDecoration(labelText: 'Enter Title'),
               controller: _titleController,
               style:
                   TextStyle(color: Theme.of(context).colorScheme.onBackground),
