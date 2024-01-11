@@ -8,7 +8,9 @@ import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:favourite_places/models/place.dart';
 
 class LocationInput extends StatefulWidget {
-  const LocationInput({super.key});
+  const LocationInput({super.key, required this.onSelectLocation});
+
+  final void Function(PlaceLocation location) onSelectLocation;
 
   @override
   State<LocationInput> createState() {
@@ -82,6 +84,8 @@ class _LocationInputState extends State<LocationInput> {
 
       _isGettingLocation = false;
     });
+
+    widget.onSelectLocation(_pickedLocation!);
 
     print(locationData.latitude);
     print(locationData.longitude);
