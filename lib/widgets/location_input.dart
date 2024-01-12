@@ -30,7 +30,10 @@ class _LocationInputState extends State<LocationInput> {
     }
     final lat = _pickedLocation!.latitude;
     final lng = _pickedLocation!.longtitude;
-    return 'https://maps.googleapis.com/maps/api/staticmap?center=$lat,$lng,NY&zoom=16&size=600x300&maptype=roadmap &markers=color:red%7Clabel:A%7C$lat,$lng&key=$mapKey';
+    return 'https://maps.googleapis.com/maps/api/staticmap?center=$lat,$lng&zoom=16&size=600x300&maptype=roadmap&markers=color:red%7Clabel:A%7C$lat,$lng&key=$mapKey';
+    //print('Image URL: $imageUrl');
+    //print('Latitude: $lat, Longitude: $lng');
+    // return imageUrl;
   }
 
   void _getCurrentUserLocation() async {
